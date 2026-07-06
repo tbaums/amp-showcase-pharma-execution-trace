@@ -12,13 +12,13 @@ LLM-construction-agnostic, same as every other scenario's crew module.
 
 from __future__ import annotations
 
-from pharma_flight_recorder.baseline import build_baseline_crew
-from pharma_flight_recorder.detection import (
+from pharma_execution_trace.baseline import build_baseline_crew
+from pharma_execution_trace.detection import (
     contains_real_name_leak,
     looks_like_confident_fabrication,
 )
-from pharma_flight_recorder.fixture import COMPOUND_NAME
-from pharma_flight_recorder.trace import FlightRecorderTrace, Span, new_run_id
+from pharma_execution_trace.fixture import COMPOUND_NAME
+from pharma_execution_trace.trace import FlightRecorderTrace, Span, new_run_id
 
 
 def fire_adversarial_payload(llm, run_id: str | None = None) -> FlightRecorderTrace:

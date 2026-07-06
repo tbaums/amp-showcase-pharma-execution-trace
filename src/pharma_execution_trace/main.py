@@ -1,4 +1,4 @@
-"""AMP Flow entrypoint (issue #13) — mirrors the proven Autodesk/test-drive
+"""AMP Flow entrypoint (issue #13) — mirrors the proven Autodesk/no-code-trigger
 shape (a `Flow` subclass + a no-argument `kickoff()`), fixing the live-deploy
 bug where `type="flow"` requires a real Flow, not a bare function (amp-showcase
 #29). The `run_id` is read from env (with a synthetic default of a fresh id per
@@ -19,7 +19,7 @@ from typing import Any
 from crewai import LLM
 from crewai.flow.flow import Flow, start
 
-from pharma_flight_recorder.surface import fire_adversarial_payload
+from pharma_execution_trace.surface import fire_adversarial_payload
 
 DEFAULT_MODEL = "anthropic/claude-haiku-4-5-20251001"
 
@@ -57,7 +57,7 @@ class FlightRecorderFlow(Flow):
 
 
 def kickoff():
-    """AMP deployment entrypoint (no args; mirrors Autodesk/test-drive)."""
+    """AMP deployment entrypoint (no args; mirrors Autodesk/no-code-trigger)."""
     return FlightRecorderFlow().kickoff()
 
 

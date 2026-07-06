@@ -2642,7 +2642,7 @@ wheels = [
 ]
 
 [[package]]
-name = "pharma-flight-recorder"
+name = "pharma-execution-trace"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

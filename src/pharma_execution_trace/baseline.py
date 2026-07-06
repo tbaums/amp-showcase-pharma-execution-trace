@@ -14,7 +14,7 @@ from __future__ import annotations
 
 from crewai import Agent, Crew, Task
 
-from pharma_flight_recorder.fixture import BASELINE_PROMPT
+from pharma_execution_trace.fixture import BASELINE_PROMPT
 
 
 def build_baseline_crew(llm) -> Crew:
